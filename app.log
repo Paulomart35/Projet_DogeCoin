@@ -1,0 +1,27 @@
+nohup: ignoring input
+Dash is running on http://0.0.0.0:8050/
+
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://172.31.36.100:8050
+[33mPress CTRL+C to quit[0m
+77.133.249.5 - - [04/Apr/2025 23:09:42] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:10:42] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:11:42] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:12:43] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:13:46] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:14:49] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:15:52] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:16:55] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:35] "GET / HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:35] "GET /_dash-layout HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:35] "GET /_favicon.ico?v=3.0.2 HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:35] "GET /_dash-dependencies HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:35] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+77.133.249.5 - - [04/Apr/2025 23:17:36] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+77.133.249.5 - - [04/Apr/2025 23:17:36] "POST /_dash-update-component HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:17:36] "GET /_favicon.ico?v=3.0.2 HTTP/1.1" 200 -
+77.133.249.5 - - [04/Apr/2025 23:18:36] "POST /_dash-update-component HTTP/1.1" 200 -
