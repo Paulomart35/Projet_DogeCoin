@@ -6,7 +6,6 @@ import os
 
 app = dash.Dash(__name__)
 
-# Fonction pour charger les données depuis le fichier CSV
 def load_data():
     if os.path.exists("data.csv"):
         df = pd.read_csv("data.csv", names=["datetime", "price"], parse_dates=["datetime"])
@@ -23,7 +22,7 @@ app.layout = html.Div(children=[
     # Intervalle pour mettre à jour le graphique automatiquement (toutes les minutes)
     dcc.Interval(
         id='interval-component',
-        interval=60*1000,  # 1 minute en millisecondes
+        interval=5*60*1000,  # 1 minute en millisecondes
         n_intervals=0
     )
 ])
