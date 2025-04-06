@@ -52,3 +52,515 @@ KeyError: "Callback function not found for output 'price-graph.figure', perhaps 
 79.95.86.105 - - [06/Apr/2025 20:47:53] "GET /_dash-component-suites/dash/dash_table/async-highlight.js HTTP/1.1" 200 -
 79.95.86.105 - - [06/Apr/2025 20:48:05] "POST /_dash-update-component HTTP/1.1" 200 -
 79.95.86.105 - - [06/Apr/2025 20:48:10] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 20:48:29,822] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:48:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 20:48:58] "POST /_dash-update-component HTTP/1.1" 200 -
+79.95.86.105 - - [06/Apr/2025 20:49:01] "POST /_dash-update-component HTTP/1.1" 200 -
+79.95.86.105 - - [06/Apr/2025 20:49:03] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 20:49:29,832] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:49:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 20:49:44] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 20:50:29,830] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:50:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:51:29,820] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:51:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:52:29,821] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:52:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 20:52:44] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 20:53:29,832] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:53:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:54:29,830] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:54:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:55:29,819] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:55:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:56:04,839] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:56:04] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:57:29,835] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:57:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 20:57:45] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 20:58:29,842] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:58:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 20:59:29,825] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 20:59:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:00:29,834] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:00:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:01:29,830] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:01:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:02:29,926] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:02:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 21:02:44] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 21:03:29,847] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:03:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:04:29,904] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:04:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:05:29,846] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:05:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:06:29,832] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:06:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:07:29,847] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:07:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+79.95.86.105 - - [06/Apr/2025 21:07:45] "POST /_dash-update-component HTTP/1.1" 200 -
+[2025-04-06 21:08:29,844] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:08:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:09:29,853] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:09:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:10:29,880] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:10:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+[2025-04-06 21:11:29,833] ERROR in app: Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1326, in dispatch
+    cb = self.callback_map[output]
+KeyError: 'price-graph.figure'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/monenv/lib64/python3.9/site-packages/dash/dash.py", line 1400, in dispatch
+    raise KeyError(msg) from missing_callback_function
+KeyError: "Callback function not found for output 'price-graph.figure', perhaps you forgot to prepend the '@'?"
+90.127.213.56 - - [06/Apr/2025 21:11:29] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -

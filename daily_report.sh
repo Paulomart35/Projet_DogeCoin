@@ -1,28 +1,28 @@
 #!/bin/bash
-# daily_report.sh : Génère un rapport quotidien à partir de data.csv
+# daily_report.sh : Génère un rapport quotidien en CSV
 
-# Définir la date d'aujourd'hui au format YYYY-MM-DD
 TODAY=$(date +'%Y-%m-%d')
+DATA_FILE="/home/ec2-user/Projet_DogeCoin/data.csv"
+OUTPUT_FILE="/home/ec2-user/Projet_DogeCoin/daily_report.csv"
 
-# Filtrer les lignes de data.csv pour la date d'aujourd'hui
-grep "^$TODAY" /home/ec2-user/Projet_DogeCoin/data.csv > /home/ec2-user/Projet_DogeCoin/data_today.csv
+# Extraire les données d'aujourd'hui depuis data.csv et les sauvegarder dans un fichier temporaire
+grep "^$TODAY" "$DATA_FILE" > /home/ec2-user/Projet_DogeCoin/data_today.csv
 
-# Vérifier si des données ont été collectées pour aujourd'hui
 if [ -s /home/ec2-user/Projet_DogeCoin/data_today.csv ]; then
-    # Le prix d'ouverture est le premier enregistrement
-    OPEN=$(head -n 1 /home/ec2-user/Projet_DogeCoin/data_today.csv | cut -d',' -f2)
-    # Le prix de clôture est le dernier enregistrement
-    CLOSE=$(tail -n 1 /home/ec2-user/Projet_DogeCoin/data_today.csv | cut -d',' -f2)
+    # Le prix d'ouverture est celui du premier enregistrement, et le prix de clôture celui du dernier.
+    OPEN=$(head -n 1 /home/ec2-user/Projet_DogeCoin/data_today.csv | cut -d',' -f2 | tr -d ' ')
+    CLOSE=$(tail -n 1 /home/ec2-user/Projet_DogeCoin/data_today.csv | cut -d',' -f2 | tr -d ' ')
     
-    # Calculer la volatilité en pourcentage (si OPEN est numérique)
     if [[ "$OPEN" != "N/A" && "$OPEN" != "0" ]]; then
-        VOLATILITY=$(echo "scale=2; (($CLOSE - $OPEN) / $OPEN) * 100" | bc)
+         VOLATILITY=$(echo "scale=2; (($CLOSE - $OPEN) / $OPEN) * 100" | bc)
     else
-        VOLATILITY="N/A"
+         VOLATILITY="N/A"
     fi
     
-    # Écrire le rapport quotidien dans un fichier
-    echo "$TODAY, Open: $OPEN, Close: $CLOSE, Volatility: $VOLATILITY%" > /home/ec2-user/Projet_DogeCoin/daily_report.csv
+    # Écrire l'en-tête et la ligne de données formatée dans le fichier CSV
+    echo "date,open,close,volatility" > "$OUTPUT_FILE"
+    echo "$TODAY,$OPEN,$CLOSE,$VOLATILITY%" >> "$OUTPUT_FILE"
 else
-    echo "$TODAY, Aucune donnée disponible" > /home/ec2-user/Projet_DogeCoin/daily_report.csv
+    echo "date,open,close,volatility" > "$OUTPUT_FILE"
+    echo "$TODAY,No data,No data,No data" >> "$OUTPUT_FILE"
 fi
