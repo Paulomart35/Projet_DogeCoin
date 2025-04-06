@@ -5,7 +5,6 @@ import plotly.express as px
 import pandas as pd
 import os
 
-# Utiliser un thème Bootstrap pour un meilleur style
 external_stylesheets = [dbc.themes.LUX]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -19,18 +18,15 @@ def load_data():
 
 def load_daily_report():
     if os.path.exists("/home/ec2-user/Projet_DogeCoin/daily_report.csv"):
-        report_df = pd.read_csv("/home/ec2-user/Projet_DogeCoin/daily_report.csv")
-        return report_df
+        return pd.read_csv("/home/ec2-user/Projet_DogeCoin/daily_report.csv", header=None, names=["report"])
     else:
-        return pd.DataFrame()
+        return pd.DataFrame(columns=["report"])
 
-# Création d'un graphique pour le suivi en temps réel
 def create_price_graph():
     df = load_data()
     fig = px.line(df, x="datetime", y="price", title="Évolution du prix de Dogecoin (USD)")
     return fig
 
-# Layout avec des onglets
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Dashboard Dogecoin", className="text-center mb-4"), width=12)
@@ -42,12 +38,11 @@ app.layout = dbc.Container([
     html.Div(id="tab-content", className="p-4"),
     dcc.Interval(
         id='interval-component',
-        interval=5*60*1000,  
+        interval=5*60*1000,  # 5 minutes
         n_intervals=0
     )
 ], fluid=True)
 
-# Callback pour mettre à jour le contenu en fonction de l'onglet sélectionné
 @app.callback(
     dash.Output("tab-content", "children"),
     [dash.Input("tabs", "active_tab"),
@@ -55,7 +50,6 @@ app.layout = dbc.Container([
 )
 def render_tab_content(active_tab, n):
     if active_tab == "realtime":
-        # Graphique en temps réel et indicateur de prix actuel
         df = load_data()
         current_price = df['price'].iloc[-1] if not df.empty else "N/A"
         return dbc.Container([
@@ -73,7 +67,6 @@ def render_tab_content(active_tab, n):
             ])
         ])
     elif active_tab == "daily":
-        # Affichage du rapport quotidien sous forme de tableau
         report_df = load_daily_report()
         return dbc.Container([
             dbc.Row([
