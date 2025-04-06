@@ -25,7 +25,6 @@ def load_data():
 def load_daily_report():
     path = "/home/ec2-user/Projet_DogeCoin/daily_report.csv"
     if os.path.exists(path):
-        # On suppose que daily_report.csv est formaté avec l'en-tête : date,open,close,high,low,pct_change
         return pd.read_csv(path)
     else:
         return pd.DataFrame(columns=["date", "open", "close", "high", "low", "pct_change"])
