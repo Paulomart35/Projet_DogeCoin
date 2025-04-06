@@ -5,71 +5,94 @@ import plotly.express as px
 import pandas as pd
 import os
 
+# Utiliser un thème Bootstrap pour un meilleur style
 external_stylesheets = [dbc.themes.LUX]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 def load_data():
-    if os.path.exists("data.csv"):
-        df = pd.read_csv("data.csv", names=["datetime", "price"], parse_dates=["datetime"])
+    if os.path.exists("/home/ec2-user/Projet_DogeCoin/data.csv"):
+        df = pd.read_csv("/home/ec2-user/Projet_DogeCoin/data.csv", names=["datetime", "price"], parse_dates=["datetime"])
         df['price'] = pd.to_numeric(df['price'], errors='coerce')
         return df
     else:
         return pd.DataFrame(columns=["datetime", "price"])
 
+def load_daily_report():
+    if os.path.exists("/home/ec2-user/Projet_DogeCoin/daily_report.csv"):
+        report_df = pd.read_csv("/home/ec2-user/Projet_DogeCoin/daily_report.csv")
+        return report_df
+    else:
+        return pd.DataFrame()
+
+# Création d'un graphique pour le suivi en temps réel
 def create_price_graph():
     df = load_data()
     fig = px.line(df, x="datetime", y="price", title="Évolution du prix de Dogecoin (USD)")
     return fig
 
+# Layout avec des onglets
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Dashboard Dogecoin", className="text-center mb-4"), width=12)
     ]),
-    dbc.Row([
-        dbc.Col(
-            dbc.Card([
-                dbc.CardBody([
-                    html.H4("Prix Actuel", className="card-title"),
-                    html.H2(id="current-price", className="card-text")
-                ])
-            ], color="primary", inverse=True),
-            width=4
-        ),
-        dbc.Col(
-            dcc.Graph(id='price-graph', figure=create_price_graph()),
-            width=8
-        )
-    ]),
-    dbc.Row([
-        dbc.Col([
-            html.H3("Données en temps réel"),
-            dash_table.DataTable(
-                id='data-table',
-                columns=[{"name": i, "id": i} for i in ["datetime", "price"]],
-                data=load_data().to_dict('records'),
-                style_table={'overflowX': 'auto'}
-            )
-        ], width=12)
-    ]),
+    dbc.Tabs([
+        dbc.Tab(label="Suivi en temps réel", tab_id="realtime"),
+        dbc.Tab(label="Rapport quotidien", tab_id="daily")
+    ], id="tabs", active_tab="realtime"),
+    html.Div(id="tab-content", className="p-4"),
     dcc.Interval(
         id='interval-component',
-        interval=5*60*1000, 
+        interval=5*60*1000,  
         n_intervals=0
     )
 ], fluid=True)
 
+# Callback pour mettre à jour le contenu en fonction de l'onglet sélectionné
 @app.callback(
-    [dash.Output('price-graph', 'figure'),
-     dash.Output('current-price', 'children'),
-     dash.Output('data-table', 'data')],
-    [dash.Input('interval-component', 'n_intervals')]
+    dash.Output("tab-content", "children"),
+    [dash.Input("tabs", "active_tab"),
+     dash.Input("interval-component", "n_intervals")]
 )
-def update_dashboard(n):
-    df = load_data()
-    fig = px.line(df, x="datetime", y="price", title="Évolution du prix de Dogecoin (USD)")
-    current_price = df['price'].iloc[-1] if not df.empty else "N/A"
-    return fig, f"{current_price} USD", df.to_dict('records')
+def render_tab_content(active_tab, n):
+    if active_tab == "realtime":
+        # Graphique en temps réel et indicateur de prix actuel
+        df = load_data()
+        current_price = df['price'].iloc[-1] if not df.empty else "N/A"
+        return dbc.Container([
+            dbc.Row([
+                dbc.Col(
+                    dbc.Card([
+                        dbc.CardHeader("Prix Actuel"),
+                        dbc.CardBody(html.H3(f"{current_price} USD", className="card-title"))
+                    ], color="primary", inverse=True),
+                    width=4
+                )
+            ], className="mb-4"),
+            dbc.Row([
+                dbc.Col(dcc.Graph(id='price-graph', figure=create_price_graph()), width=12)
+            ])
+        ])
+    elif active_tab == "daily":
+        # Affichage du rapport quotidien sous forme de tableau
+        report_df = load_daily_report()
+        return dbc.Container([
+            dbc.Row([
+                dbc.Col(html.H3("Rapport quotidien"), width=12)
+            ]),
+            dbc.Row([
+                dbc.Col(
+                    dash_table.DataTable(
+                        id='daily-report-table',
+                        columns=[{"name": i, "id": i} for i in report_df.columns],
+                        data=report_df.to_dict('records'),
+                        style_table={'overflowX': 'auto'}
+                    ),
+                    width=12
+                )
+            ])
+        ])
+    else:
+        return "Aucun contenu à afficher."
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=8050)
-
