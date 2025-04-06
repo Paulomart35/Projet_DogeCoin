@@ -5,7 +5,6 @@ import plotly.express as px
 import pandas as pd
 import os
 
-# Utiliser un thème Bootstrap, par exemple "LUX"
 external_stylesheets = [dbc.themes.LUX]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -17,13 +16,11 @@ def load_data():
     else:
         return pd.DataFrame(columns=["datetime", "price"])
 
-# Exemple de graphique
 def create_price_graph():
     df = load_data()
     fig = px.line(df, x="datetime", y="price", title="Évolution du prix de Dogecoin (USD)")
     return fig
 
-# Layout enrichi
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("Dashboard Dogecoin", className="text-center mb-4"), width=12)
@@ -56,12 +53,11 @@ app.layout = dbc.Container([
     ]),
     dcc.Interval(
         id='interval-component',
-        interval=60*1000,  # Mise à jour toutes les minutes
+        interval=5*60*1000, 
         n_intervals=0
     )
 ], fluid=True)
 
-# Callback pour mettre à jour le graphique et l'indicateur
 @app.callback(
     [dash.Output('price-graph', 'figure'),
      dash.Output('current-price', 'children'),
